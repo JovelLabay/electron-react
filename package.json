@@ -1,6 +1,6 @@
 {
   "name": "electron-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -18,7 +18,7 @@
   "homepage": "./",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/JovelLabay/electron-react"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,11 +28,11 @@
     "electron:serve": "concurrently -k \"cross-env BROWSER=none yarn start\" \"yarn electron:start\"",
     "electron:build": "yarn build && electron-builder -c.extraMetadata.main=build/main.js",
     "electron:start": "wait-on tcp:3000 && electron .",
-    "electron:publish": "set GH_TOKEN=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 && build && electron:build --win --publish always"
+    "electron:publish": "set GH_TOKEN=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 && yarn build && electron-builder -c.extraMetadata.main=build/main.js --publish always"
   },
   "build": {
-    "appId": "com.example.electron-cra",
-    "productName": "electron-cra",
+    "appId": "com.electron-react.demo",
+    "productName": "React Electron Demo",
     "directories": {
       "output": "electron-build",
       "buildResources": "build-assets"
